@@ -17,7 +17,7 @@ public class KidCandy1431 {
     }
 
     public static void main(String[] args) {
-        int candies[] = { 5, 4, 3, 2, 1, 8, 4 };
+        int candies[] = { 5, 4, 7, 2, 1, 8, 4 };
         int extra = 2;
         System.out.println(kidsWithCandies(candies, extra));
     }
