@@ -1,19 +1,12 @@
 public class EvenDigit1295 {
     public static int findNumbers(int[] nums) {
-        int res = 0;
-        for (int num : nums) {
-            res += (numberOfDigits(num) % 2 == 0) ? 1 : 0;
+        int count = 0;
+        for (int i : nums) {
+            if (((int) Math.log10(i) + 1) % 2 == 0) {
+                count++;
+            }
         }
-        return res;
-    }
-
-    public static int numberOfDigits(int num) {
-        int res = 0;
-        while (num > 0) {
-            res++;
-            num /= 10;
-        }
-        return res;
+        return count;
     }
 
     public static void main(String[] args) {
