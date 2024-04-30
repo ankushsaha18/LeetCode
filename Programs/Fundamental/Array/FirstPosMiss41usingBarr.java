@@ -1,3 +1,5 @@
+package Array;
+
 public class FirstPosMiss41usingBarr {
     public static void main(String[] args) {
         int arr[] = { 1, 2, 7 };

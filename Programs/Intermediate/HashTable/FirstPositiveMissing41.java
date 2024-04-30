@@ -1,33 +1,32 @@
-import java.util.ArrayList;
-import java.util.List;
 
-public class NumberDisappeared448 {
+// use boolean array method for efficiency follow Q.no. FirstPosMiss41usingBarr
+
+public class FirstPositiveMissing41 {
     public static void main(String[] args) {
-        int arr[] = { 4, 3, 2, 7, 8, 2, 3, 1 };
-        System.out.println(findDisappearedNumbers(arr));
+        int arr[] = { 3, 4, -1, 1 };
+        System.out.println(firstMissingPositive(arr));
     }
 
-    public static List<Integer> findDisappearedNumbers(int[] nums) {
+    public static int firstMissingPositive(int[] nums) {
         cycleSort(nums);
-        List<Integer> ans = new ArrayList<>();
         for (int i = 0; i < nums.length; i++) {
             if (i + 1 != nums[i]) {
-                ans.add(i + 1);
+                return i + 1;
             }
         }
-        return ans;
+        return nums.length + 1;
     }
 
     public static void cycleSort(int arr[]) {
         int i = 0;
         while (i < arr.length) {
             int correct = arr[i] - 1;
-            if (arr[i] <= arr.length && arr[i] == arr[correct]) {
-                i++;
-            } else {
+            if (arr[i] > 0 && arr[i] <= arr.length && arr[i] != arr[correct]) {
                 int temp = arr[i];
                 arr[i] = arr[correct];
                 arr[correct] = temp;
+            } else {
+                i++;
             }
         }
     }

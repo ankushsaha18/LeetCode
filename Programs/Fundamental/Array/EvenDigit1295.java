@@ -1,3 +1,5 @@
+package Fundamental.Array;
+
 public class EvenDigit1295 {
     public static int findNumbers(int[] nums) {
         int count = 0;

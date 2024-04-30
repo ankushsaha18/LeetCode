@@ -1,3 +1,4 @@
+package Fundamental.Array;
 import java.util.Arrays;
 
 public class ArrasyShuffle1470 {
