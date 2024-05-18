@@ -1,3 +1,5 @@
+package Intermediate.BinarySearch;
+
 import java.util.Arrays;
 
 public class FirstLastPosSortedArr34 {

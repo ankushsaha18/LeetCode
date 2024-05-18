@@ -1,3 +1,5 @@
+package Intermediate.BinarySearch;
+
 public class FindDuplicateNum287 {
     public static void main(String[] args) {
         int arr[] = { 1, 3, 4, 2, 2 };

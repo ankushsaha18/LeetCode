@@ -1,4 +1,4 @@
-
+package Intermediate.HashTable;
 // use boolean array method for efficiency follow Q.no. FirstPosMiss41usingBarr
 
 public class FirstPositiveMissing41 {

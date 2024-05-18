@@ -1,3 +1,5 @@
+package Fundamental.TwoPointer;
+
 public class MergeStringAlt1768{
     public static void main(String[] args) {
         String word1 = "abc";

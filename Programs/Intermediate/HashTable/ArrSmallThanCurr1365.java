@@ -1,3 +1,5 @@
+package Intermediate.HashTable;
+
 import java.util.Arrays;
 
 public class ArrSmallThanCurr1365 {

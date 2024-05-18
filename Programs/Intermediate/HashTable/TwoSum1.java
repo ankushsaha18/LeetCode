@@ -1,4 +1,4 @@
-package Array;
+package Intermediate.HashTable;
 
 import java.util.Arrays;
 

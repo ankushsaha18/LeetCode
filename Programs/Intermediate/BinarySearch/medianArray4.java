@@ -1,3 +1,4 @@
+package Intermediate.BinarySearch;
 import java.util.*;
 
 public class medianArray4 {

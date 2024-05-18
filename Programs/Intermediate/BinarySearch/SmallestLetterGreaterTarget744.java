@@ -1,3 +1,5 @@
+package Intermediate.BinarySearch;
+
 public class SmallestLetterGreaterTarget744 {
     public static void main(String[] args) {
         char arr[] = { 'x', 'x', 'y', 'y' };

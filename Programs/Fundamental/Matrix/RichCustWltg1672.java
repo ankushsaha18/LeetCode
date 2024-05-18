@@ -1,3 +1,5 @@
+package Fundamental.Matrix;
+
 public class RichCustWltg1672 {
     public static int maximumWealth(int[][] accounts) {
         int res = 0;

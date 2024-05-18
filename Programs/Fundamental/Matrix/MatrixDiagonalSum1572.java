@@ -1,3 +1,5 @@
+package Fundamental.Matrix;
+
 public class MatrixDiagonalSum1572 {
     public static int diagonalSum(int[][] mat) {
         int n = mat.length / 2;

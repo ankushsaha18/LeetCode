@@ -1,3 +1,5 @@
+package Intermediate.Math;
+
 public class GoodPairs1512 {
     public static int numIdenticalPairs(int[] nums) {
         int res = 0;

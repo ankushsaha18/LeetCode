@@ -1,3 +1,4 @@
+package Intermediate.BitManipulation;
 import java.util.Arrays;
 
 public class FlipImage832 {

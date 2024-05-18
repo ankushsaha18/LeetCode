@@ -1,3 +1,5 @@
+package Intermediate.Math;
+
 public class OddValMatrix1252 {
     public static int oddCells(int m, int n, int[][] indices) {
         int count = 0;

@@ -1,3 +1,5 @@
+package Fundamental.TwoPointer;
+
 public class FirstPalindromicStringArr2108 {
     public static void main(String[] args) {
         String words[] = { "abc", "car", "ada", "racecar", "cool" };

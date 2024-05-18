@@ -1,3 +1,5 @@
+package Intermediate.BinarySearch;
+
 public class SpltArrayLargestSum410 {
     public static void main(String[] args) {
         int arr[] = { 7, 5, 2, 8, 10 };

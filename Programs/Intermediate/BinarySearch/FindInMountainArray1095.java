@@ -1,5 +1,7 @@
+package Intermediate.BinarySearch;
 import java.util.ArrayList;
 import java.util.Arrays;
+
 public class FindInMountainArray1095 {
     public static void main(String[] args) {
         ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(2,4,5,6,3,1));
