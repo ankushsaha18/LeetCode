@@ -1,3 +1,5 @@
+package Fundamental.String;
+
 public class SentencePangram1832 {
     public static boolean checkIfPangram(String sentence) {
         String temp = "abcdefghijklmnopqrstuvwxyz";
