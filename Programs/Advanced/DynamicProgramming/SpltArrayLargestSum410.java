@@ -2,7 +2,7 @@ package Advanced.DynamicProgramming;
 
 public class SpltArrayLargestSum410 {
     public static void main(String[] args) {
-        int arr[] = { 7, 5, 2, 8, 10 };
+        int[] arr = { 7, 5, 2, 8, 10 };
         System.out.println(splitArray(arr, 2));
     }
 
