@@ -6,17 +6,17 @@ public class HappyNumber202 {
         System.out.println(isHappy(n));
     }
     public static boolean isHappy(int n) {
-        int slow = squareSum(n);
-        int fast = squareSum(squareSum(n));
+        int slow = n;
+        int fast = n;
 
-        while(fast != 1){
+        do{
             slow = squareSum(slow);
             fast = squareSum(squareSum(fast));
-            if(slow == fast){
-                return false;
+            if(fast == 1){
+                return true;
             }
-        }
-        return true;
+        }while (fast != slow);
+        return false;
     }
     public static int squareSum(int n){
         int ans = 0;
