@@ -3,7 +3,7 @@ package Intermediate.BinarySearch;
 public class SearchInRotatedArray33 {
     // Google Question
     public static void main(String[] args) {
-        int arr[] = { 2, 9, 2, 2 };
+        int[] arr = { 2, 9, 2, 2 };
         System.out.println(search(arr, 2));
     }
 
