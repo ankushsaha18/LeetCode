@@ -2,18 +2,12 @@ package Fundamental.LinkedList;
 
 public class MiddleOfLL876 {
     public ListNode middleNode(ListNode head) {
-        int length = 0;
-        ListNode temp = head;
-        while(temp != null){
-            temp = temp.next;
-            length++;
+        ListNode fast = head;
+        ListNode slow = head;
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
         }
-        length = length/2;
-        temp = head;
-        while (length != 0){
-            temp = temp.next;
-            length--;
-        }
-        return temp;
+        return slow;
     }
 }

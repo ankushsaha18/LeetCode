@@ -1,3 +1,5 @@
+package Fundamental.Array;
+
 import java.util.*;
 
 public class medianArray4 {

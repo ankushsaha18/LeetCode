@@ -8,36 +8,25 @@ public class SearchInRotatedArray33 {
     }
 
     public static int search(int[] nums, int target) {
-        int point = pivt(nums);
-        int ans = binarySearch(nums, target, 0, point);
-        if (ans == -1 && point + 1 < nums.length) {
-            ans = binarySearch(nums, target, point + 1, nums.length - 1);
-        }
-        return ans;
-    }
-
-    public static int pivt(int[] arr) {
-        for (int i = 0; i < arr.length - 1; i++) {
-            if (arr[i] > arr[i + 1]) {
-                return i;
+        int low = 0 , high = nums.length - 1;
+        while (low <= high){
+            int mid = low + (high - low)/2;
+            if(nums[mid] == target){
+                return mid;
+            }else if(nums[low] <= nums[mid]){  // To check which half is sorted left or right
+                if(target >= nums[low] && target <= nums[mid]){  // To check if target lies in the range of sorted part
+                    high = mid - 1;
+                }else{
+                    low = mid + 1;
+                }
+            }else{
+                if(target >= nums[mid] && target <= nums[high]){
+                    low = mid + 1;
+                }else{
+                    high = mid - 1;
+                }
             }
         }
-        return arr[0];
-    }
-
-    public static int binarySearch(int arr[], int target, int i, int j) {
-        while (i < j) {
-            int m = (i + j) / 2;
-            if (target > arr[m]) {
-                i = m + 1;
-            } else {
-                j = m;
-            }
-        }
-        if (i < arr.length && arr[i] == target) {
-            return i;
-        }
-
         return -1;
     }
 }
