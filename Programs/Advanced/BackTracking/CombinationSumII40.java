@@ -16,24 +16,28 @@ public class CombinationSumII40 {
         function(ans,temp,0,target,candidates);
         return ans;
     }
-    public static void function(List<List<Integer>> ans,List<Integer> temp,int index,int target,int[] candidates) {
-        if (target == 0) {
+    public static void function(List<List<Integer>> ans,List<Integer> temp,int index,int target,int[] candidates){
+        if(target == 0){
             ans.add(new ArrayList<>(temp));
             return;
         }
-        if (target < 0 || index == candidates.length) {
+        if(target < 0 || index == candidates.length){
             return;
         }
-        for (int i = index; i < candidates.length; i++) {
-            // The idea is to pick one and skip to the different one
-            // This will skip all the index with same values
-            // i>index as we don't want repeatation after it
-            if (i > index && candidates[i] == candidates[i - 1]) {
-                continue;
+        // This one is for taking the index
+        temp.add(candidates[index]);
+        function(ans,temp,index+1,target - candidates[index],candidates);
+        temp.remove(temp.size()-1);
+        for(int i = index + 1 ; i < candidates.length ; i++){
+            // This one is for skipping to the next different index
+            if(candidates[i] != candidates[i-1]){
+                function(ans,temp,i,target,candidates);
+                // The break is important because if we find the diff one we will go back
+                return;
             }
-            temp.add(candidates[i]);
-            function(ans, temp, i + 1, target - candidates[i], candidates);
-            temp.remove(temp.size() - 1);
+            if(candidates[i] > target){
+                return;
+            }
         }
     }
 }
